@@ -1,0 +1,28 @@
+EXOPLANET MASS ESTIMATOR -- TRAINING REPORT
+============================================
+
+Linear regression (baseline)
+  R^2 (log space)  : 0.637
+  MAE (log space)  : 0.449 dex
+  RMSE (log space) : 0.611 dex
+  typical miss     : factor of 2.81x
+
+Best hyperparameters: {'model__max_features': 0.5, 'model__min_samples_leaf': 1, 'model__n_estimators': 600}
+CV R^2 during tuning: 0.825
+
+TUNED RANDOM FOREST -- held-out 30% test set
+  R^2 (log space)  : 0.824
+  MAE (log space)  : 0.280 dex
+  RMSE (log space) : 0.426 dex
+  typical miss     : factor of 1.91x
+
+Learned feature importances:
+  pl_rade      0.624
+  pl_orbsmax   0.113
+  pl_insol     0.060
+  pl_eqt       0.042
+  st_rad       0.038
+  st_mass      0.032
+  pl_orbper    0.031
+  st_met       0.031
+  st_teff      0.030
